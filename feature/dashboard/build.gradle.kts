@@ -1,20 +1,17 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
 }
 
 android {
-    namespace = "com.bimabk.mytestapp"
-    compileSdk = 35
+    namespace = "com.bimabk.dashboard"
+    compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.bimabk.mytestapp"
         minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -39,9 +36,8 @@ android {
 }
 
 dependencies {
+
     implementation(project(":common"))
     implementation(project(":router"))
-    implementation(project(":feature:list"))
-    implementation(project(":feature:detail"))
-    implementation(project(":feature:dashboard"))
+
 }

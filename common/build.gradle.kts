@@ -31,6 +31,9 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -54,4 +57,6 @@ dependencies {
     api(libs.paging.runtime.ktx)
     api(libs.androidx.swiperefreshlayout)
     api(libs.kotlinx.serialization.json)
+    api(libs.androidx.navigation.fragment.ktx)
+    api(libs.androidx.navigation.ui.ktx)
 }

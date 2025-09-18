@@ -2,6 +2,8 @@ package com.bimabk.mytestapp.di
 
 import androidx.room.Room
 import com.bimabk.common.service.UserService
+import com.bimabk.dashboard.DashboardViewModel
+import com.bimabk.dashboard.history.HistoryViewModel
 import com.bimabk.data.pagging.RemoteMediator
 import com.bimabk.data.repository.UserRepository
 import com.bimabk.data.repository.UserRepositoryImpl
@@ -67,6 +69,8 @@ val repositoryModule = module {
 val viewModelModule = module {
     viewModelOf(::ListUsersViewModel)
     viewModelOf(::DetailUserViewModel)
+    viewModelOf(::DashboardViewModel)
+    viewModelOf(::HistoryViewModel)
 }
 
 val commonModule = module {
